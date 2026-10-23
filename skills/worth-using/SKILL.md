@@ -19,7 +19,9 @@ The rubric has six criteria: Job, First value, Fit, Outcome, Trust, and Return. 
 - **Seen:** someone who is not on the team was observed using it, or reported a specific use with details.
 - **Repeated:** that person, or others like them, used it again without being asked, shown in logs or their own account.
 
-Evidence comes from what happened, not from how confident anyone sounds. When you have not seen it, say Claimed. A reading of the code is never Seen.
+Evidence comes from what happened, not from how confident anyone sounds. Without a matching observation, say Claimed. A reading of the code is never Seen.
+
+A supplied, dated record of specific use by someone outside the team can support Seen; name the record for each rating it supports, keep unsupported ratings Claimed, and use Repeated only when the records show unprompted return.
 
 ## Sound like a good reviewer
 
@@ -59,7 +61,7 @@ Before proposing any addition to fix a failed gate, ask what could be removed in
 - **Stranger-ready:** Job, First value, Fit, Outcome, and Trust are all Solid, and each is at least Seen.
 - **Worth using:** stranger-ready, plus Return is Solid and Repeated.
 
-Return usually cannot be observed inside one session. When the tool reaches stranger-ready, stop, write the return check on the card, and say plainly that Worth using is not yet shown. Never declare a zone that a single criterion or its evidence does not support.
+Return usually cannot be observed inside one session. When the tool reaches stranger-ready but unprompted return is not yet shown, stop, write the return check on the card, and say plainly that Worth using is not yet shown. Never declare a zone that a single criterion or its evidence does not support.
 
 Stop when the target zone is reached, when the round budget ends, or when a round stalls. If a full round does not move any criterion, the problem is upstream: the wrong user or no real job. That calls for watching people work without the tool, not another pass. Say so plainly.
 
@@ -82,7 +84,7 @@ At exit, repeat the opening questions and place the builder again. Always produc
 - **Usefulness card:** the user and the job, then each criterion with its rating, its evidence, and one line; the zone status; the return check; anything cut. A team card adds each rater's ratings and the spread.
 - **Growth card (Coach only):** started at (quoted), got to (quoted), the full jagged trace with labeled dips, the decision log, the builder's ratings against the observed ratings at each check, and where to start next time.
 
-Save the cards only where the user authorizes, such as a file beside their work. Do not claim memory you have not saved somewhere future work will read. In a staged run, such as the bundle's recipe, questions and passes are batched at each gate instead of asked one per turn; the gates still decide what is kept. When you cannot ask the user at all, for example because you were delegated this task, score from what you were given, mark every rating Claimed, and return your questions with the result instead of answering them yourself.
+Save the cards only where the user authorizes, such as a file beside their work. Do not claim memory you have not saved somewhere future work will read. In a staged run, such as the bundle's recipe, questions and passes are batched at each gate instead of asked one per turn; the gates still decide what is kept. When you cannot ask the user at all, for example because you were delegated this task, score from what you were given, apply the evidence rules above, and return your questions with the result instead of answering them yourself.
 
 ## Keep it honest
 

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "fixture_id": "f03",
+  "tool_name": "TrailDesk",
+  "named_user": "Rita Stone",
+  "user_role": "volunteer coordinator",
+  "setting": "the fictional Eastbank Community Garden",
+  "job": "prepare the weekly volunteer watering rota",
+  "baseline_cost": "20 minutes each Sunday",
+  "files": [
+    "README.md",
+    "pitch.md",
+    "first_session.md",
+    "usage.csv"
+  ],
+  "evidence_boundary": "All events are fictional. Treat the scenario records as the entire dossier. No facts outside the supplied records may be invented.",
+  "fictional_calendar": {
+    "note": "All calendar dates are invented for this fictional scenario, not real study dates.",
+    "first_session_date": "2026-09-06",
+    "usage_week_starts": [
+      "2026-08-31",
+      "2026-09-07",
+      "2026-09-14",
+      "2026-09-21",
+      "2026-09-28",
+      "2026-10-05"
+    ],
+    "usage_week_ends": [
+      "2026-09-06",
+      "2026-09-13",
+      "2026-09-20",
+      "2026-09-27",
+      "2026-10-04",
+      "2026-10-11"
+    ],
+    "usage_period_end": "2026-10-11",
+    "followup_record_date": "2026-10-12",
+    "record_dates": {
+      "O01": "2026-09-06",
+      "O02": "2026-09-06",
+      "O03": "2026-09-06",
+      "O04": "2026-09-06",
+      "O05": "2026-09-06",
+      "O06": "2026-09-06",
+      "O07": "2026-09-06",
+      "O08": "2026-09-06",
+      "O09": "2026-09-13",
+      "O10": "2026-09-20",
+      "O11": "2026-09-27",
+      "O12": "2026-10-04",
+      "O13": "2026-10-11",
+      "O14": "2026-10-12"
+    }
+  }
+}

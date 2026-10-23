@@ -23,6 +23,8 @@ Every rating carries one grade. Evidence comes from what happened, never from ho
 
 A claim stays a claim until someone who isn't on the team uses the tool. Reading the code is never Seen.
 
+A supplied, dated record of specific use by someone outside the team can support Seen; name the record for each rating it supports, keep unsupported ratings Claimed, and use Repeated only when the records show unprompted return.
+
 ## Zones
 
 - Stranger-ready: Job, First value, Fit, Outcome, and Trust are all Solid, and each is at least Seen.

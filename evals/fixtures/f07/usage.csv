@@ -1,0 +1,7 @@
+scenario,observation_id,week,user,weekly_opens,initial_invited_opens,prompted_opens,unprompted_opens,builder_posts,builder_reminders,opens_within_post_window,post_window_hours,source,week_start,week_end,record_date
+FICTIONAL,O08,1,Devon Moss,2,1,0,1,0,0,0,0,fictional per-user event log and communication audit,2026-08-31,2026-09-06,2026-09-06
+FICTIONAL,O09,2,Devon Moss,2,0,0,2,0,0,0,0,fictional per-user event log and communication audit,2026-09-07,2026-09-13,2026-09-13
+FICTIONAL,O10,3,Devon Moss,3,0,0,3,0,0,0,0,fictional per-user event log and communication audit,2026-09-14,2026-09-20,2026-09-20
+FICTIONAL,O11,4,Devon Moss,2,0,0,2,0,0,0,0,fictional per-user event log and communication audit,2026-09-21,2026-09-27,2026-09-27
+FICTIONAL,O12,5,Devon Moss,3,0,0,3,0,0,0,0,fictional per-user event log and communication audit,2026-09-28,2026-10-04,2026-10-04
+FICTIONAL,O13,6,Devon Moss,2,0,0,2,0,0,0,0,fictional per-user event log and communication audit,2026-10-05,2026-10-11,2026-10-11

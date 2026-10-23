@@ -1,0 +1,243 @@
+{
+  "schema_version": 2,
+  "status": "blocked_before_live_pilot",
+  "phase": "pilot",
+  "is_empirical": false,
+  "date": "2026-10-23",
+  "timezone": "America/New_York",
+  "source_commit": "8a3a3ac5c26b007d592c0f423f74b52c157e00e9",
+  "source_provenance": {
+    "repository": "michaeljabbour/amplifier-skill-worth-using",
+    "commit": "8a3a3ac5c26b007d592c0f423f74b52c157e00e9",
+    "source_acquisition": "checked-out source bytes",
+    "sources": [
+      {
+        "path": "skills/worth-using/SKILL.md",
+        "snapshot": "SKILL.snapshot.md",
+        "blob_sha": "3e642fb74f8fbb478e8fc56ab2df129c60f1b00c",
+        "sha256": "7886f3fb15c8e10eab7764315556a8dfde2da8627a096c4c30552b4ab9963d45"
+      },
+      {
+        "path": "skills/worth-using/references/rubric.md",
+        "snapshot": "rubric.snapshot.md",
+        "blob_sha": "ad9fffae678dd6ab0c66fa961cc227b53a682a34",
+        "sha256": "5bde8133b9c562e9588369f9693cd756714626ea217c6b56d7cc054150c79e77"
+      },
+      {
+        "path": "docs/BENCHMARK.md",
+        "snapshot": "BENCHMARK.snapshot.md",
+        "blob_sha": "dc6bea312458f33dff923bae4d8b2c868492383b",
+        "sha256": "c936c6b71cb24f0d994f0971286492f803588980a7df6397254af69f9b6eeb89"
+      },
+      {
+        "path": "AGENTS.md",
+        "snapshot": "AGENTS.snapshot.md",
+        "blob_sha": "bc224828991f04f37d44244090e0b4fa0e61eb8d",
+        "sha256": "a582aed39f77448af67393b67a2a460c87d46a5fe078840ea4ffcc63c42dc11f"
+      }
+    ]
+  },
+  "source_selection": "checkout",
+  "source_record": null,
+  "source_version": "f71c01ddbf1866f405b2ce5fec39e92bd6e3a1fb7cc558b2bdadc9c4d97a872e",
+  "models": {
+    "eval": {
+      "role": "eval",
+      "model": null,
+      "provider": "openai",
+      "temperature": 0.2,
+      "max_tokens": 2400,
+      "input_usd_per_million": null,
+      "output_usd_per_million": null,
+      "seed_support_status": "parameter_requested_pending_live_validation",
+      "model_family": null,
+      "model_family_basis": "operator_declared_not_api_verified"
+    },
+    "judge": {
+      "role": "judge",
+      "model": null,
+      "provider": "openai",
+      "temperature": 0.0,
+      "max_tokens": 6000,
+      "input_usd_per_million": null,
+      "output_usd_per_million": null,
+      "seed_support_status": "parameter_requested_pending_live_validation",
+      "model_family": null,
+      "model_family_basis": "operator_declared_not_api_verified"
+    },
+    "simulator": {
+      "role": "simulator",
+      "model": null,
+      "provider": "openai",
+      "temperature": 0.2,
+      "max_tokens": 3500,
+      "input_usd_per_million": null,
+      "output_usd_per_million": null,
+      "seed_support_status": "parameter_requested_pending_live_validation"
+    }
+  },
+  "family_verification": "operator declarations only; model families are not inferred from names or API-verified",
+  "seed_base": 41001,
+  "seeds": [
+    41001
+  ],
+  "requested_conditions": [
+    "skill",
+    "baseline"
+  ],
+  "conditions": [
+    "skill",
+    "baseline",
+    "placebo"
+  ],
+  "placebo_added_for_required_comparison": true,
+  "fixture_list": [
+    "f01",
+    "f06"
+  ],
+  "tasks": [
+    "score",
+    "team",
+    "coach"
+  ],
+  "coach_max_agent_turns": 12,
+  "coach_round_budget_evaluated": 3,
+  "bootstrap_seed": 90210,
+  "judge_order_seeds": [
+    62001,
+    62002
+  ],
+  "hand_check_seed": 73001,
+  "source_hashes": {
+    "skill_sha256": "7886f3fb15c8e10eab7764315556a8dfde2da8627a096c4c30552b4ab9963d45",
+    "rubric_sha256": "5bde8133b9c562e9588369f9693cd756714626ea217c6b56d7cc054150c79e77"
+  },
+  "prompt_hashes": {
+    "skill": "0a73dbb15db06dd9fb5f4c5684979b78f812c2e6236c68f2cf3bfd78b9a1d3ce",
+    "baseline": "e75a36d09c57aaefcdcd38236ca014f45819aa7620e04a96922757bf852c15f3",
+    "placebo": "bb77ecf51f8056eb62e9b0c72149e1d92f81dbc6bba1a3515f364815a070477f"
+  },
+  "prompt_word_counts": {
+    "skill": 3259,
+    "baseline": 96,
+    "placebo": 3179
+  },
+  "placebo_matching": "coherent generic paragraph within 5% of treatment whitespace words; provider token counts recorded when available",
+  "placebo_word_difference_fraction": -0.025292443882390134,
+  "reproduction_command": "python3 evals/run.py --conditions skill,baseline --seeds 3",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "linux"
+  },
+  "completed_empirical_trials": 0,
+  "missing_environment": [
+    "EVAL_MODEL is unset",
+    "OPENAI_API_KEY is unset",
+    "JUDGE_MODEL is unset",
+    "SIMULATOR_MODEL is unset (defaults to EVAL_MODEL)",
+    "EVAL_MODEL_FAMILY is unset; declare the actual model family explicitly",
+    "JUDGE_MODEL_FAMILY is unset; declare the actual model family explicitly"
+  ],
+  "file_hashes": {
+    "evals/PROTOCOL.md": "9ea050402a3b728145dee78cc5ed1122bb266cf42830689e12441921e4b38493",
+    "evals/README.md": "a9bc4f46582509e22dd97341bde2a2d26c6a1afc1cfb303a6d0ed785932641f4",
+    "evals/experiment.py": "762a4cb34983302af51c9e83d864789c334d713a3e9a8daf656927e9e605607f",
+    "evals/fixtures/complete_suite.py": "f2d87c08be1adcbe21a9ce4bbcdf8f3a9472fa1e8bce28bd4b4bf21d70322e90",
+    "evals/fixtures/f01/README.md": "9a6df8f81d5ce4d141dd534643f2848047340ca7ce314f569125ffecc73c3b67",
+    "evals/fixtures/f01/dossier.json": "be4bf6803545fc38069d07a498629644457200607960aaa889ae9308dacdfade",
+    "evals/fixtures/f01/first_session.md": "a755e8fe3efca607f483f478758c0ed22188683c619fd4005b897d20e22a6ead",
+    "evals/fixtures/f01/pitch.md": "a2e42a852b66609d2556bc4ecee82bc332253229c196d5066d3cdf23cbbb1a5a",
+    "evals/fixtures/f01/usage.csv": "4cf55148624aef2fe726a54a13a3226e5e24e9d288b63285ed4bc253de960e1b",
+    "evals/fixtures/f02/README.md": "687876a88e9c6d1953e31a80d466554fe9e0537713a10bd7ce757a24f507bab8",
+    "evals/fixtures/f02/dossier.json": "2adb3f1aac4f59c38d21975fb7b14d7323c70d2c8c9695dd698f3af8957bc344",
+    "evals/fixtures/f02/first_session.md": "470c4944f70b301ed5f4509ace668310ddd21667cb28ef3c0d0ced7b72dfbcb3",
+    "evals/fixtures/f02/pitch.md": "a3f8b5a954e88ef3f601308fa1c0fc3b642a37cc5f8a053ecf9da5fe4cc8b743",
+    "evals/fixtures/f02/usage.csv": "9434c0e9bb62627d23bfe20bf44f14082989bb97a6d484eaa933efdb8d8b6dbf",
+    "evals/fixtures/f03/README.md": "2d0aedd0bba2fbc3cbc10da4a819d84f3a799aa6de45679f820431350fe750c3",
+    "evals/fixtures/f03/dossier.json": "cafbc91a0e868a1954caacfcf0c93966f83dde092e0a26812aecb8cca3108667",
+    "evals/fixtures/f03/first_session.md": "2acbc89af1d3a4375c0be2e83e88bfcbdfb9bb47fa7d8206e54e6252a5a14576",
+    "evals/fixtures/f03/pitch.md": "aee1beceddbf999d7a7a8031d260e39e30bb6b83fa1a33b2808f48f5d4d2d86c",
+    "evals/fixtures/f03/usage.csv": "36d67c08d3da4a22d88467af09003f18b0759e2e1bef864d703248860f6b7921",
+    "evals/fixtures/f04/README.md": "5405b665f16893af8094c6b27d22a5ecc766b9cba7d13d7aeb2fd854831a99e1",
+    "evals/fixtures/f04/dossier.json": "90dbfd3a00b7d6961d0eca41d00f143ff3d7ff1406d4f62c42ee181890bdbfb8",
+    "evals/fixtures/f04/first_session.md": "da171b2cb5aeaacbd57a916988422e1794010283a5952cfbab5c95c77f0e3930",
+    "evals/fixtures/f04/pitch.md": "7226ab8788ba6a4c7abdde2f6d2c073851f83192da284d7f19e4f3f3b4ed0508",
+    "evals/fixtures/f04/usage.csv": "ff040c2dfb30ad590e5fe8a1cde7fbd77b3ef34dc5c3a5e278dd2c699b911d2f",
+    "evals/fixtures/f05/README.md": "9394f05f9dea81a4de3d9f669062bbefe6d986b96f814f9a244a385008acb8f5",
+    "evals/fixtures/f05/dossier.json": "7ef3118ef38cd798ee4cbd6fc5e798b92a6b1ba36fb82f2b9c5b3e58f497dc80",
+    "evals/fixtures/f05/first_session.md": "8185346e9d8ca378db24a3d57b8fdfea0e175b82b2694053c551d67a58ef50e6",
+    "evals/fixtures/f05/pitch.md": "e20fcd33d534744098a9c86b81b594362d7f32c71eb160c9b074ef356cae27e6",
+    "evals/fixtures/f05/usage.csv": "c368c59f74fef13528bf3476b7b51f2b1754e0685a34297aa720c9fcf6e485e4",
+    "evals/fixtures/f06/README.md": "369a5c662cf6630e6391d2c2591745d609acea4d1ac6abf83495953005cac251",
+    "evals/fixtures/f06/dossier.json": "8ffbfe313af108dfedde5f00cc26af72a9398ac5577b009fd5ff48f6e3be078b",
+    "evals/fixtures/f06/first_session.md": "e86b9967b92284a8e338be3e53afe3763705d939bca2224f3f2f90e54c39a6cc",
+    "evals/fixtures/f06/pitch.md": "c0767b5d652102295136f2b0d216c0fe9d8f07102fc1068f25ab92ccc3b2dbc3",
+    "evals/fixtures/f06/usage.csv": "8a534c97e083e268da491cfb0989f5131f3af0791fdb361f790995f6fcf399ba",
+    "evals/fixtures/f07/README.md": "97b65606fd755ddb68275e946452c89f246264487536cfee553535050ab1a096",
+    "evals/fixtures/f07/dossier.json": "52dc1e636fefad33a94b5dd1c6156195dc1a0f7598a2bfd838f48d73cb22c030",
+    "evals/fixtures/f07/first_session.md": "65ac92f106a49c341d21598157e449049d304d1c7ef45b89e4d3704b73343779",
+    "evals/fixtures/f07/pitch.md": "6d92dee294153e4c0779b5e12a283b515ddd86ed6a909c831ed768a38485ac6c",
+    "evals/fixtures/f07/usage.csv": "cd2b7ce20ff37e9034b881c53c2e83589bbe04295056fdc44a0b09e4ad2a4bfe",
+    "evals/fixtures/f08/README.md": "f06d7d1556f72a5a057d6287ce90f80eb13d8902799f181d8852c5e5520c0287",
+    "evals/fixtures/f08/dossier.json": "94c1e975e0eba3162274ff048833f2ef951a2dd7de75089d00bdb1116bff8d5d",
+    "evals/fixtures/f08/first_session.md": "079a7bc7e7a6ae3e9053a02616846e46039a40a8e5102e05fb164fa733410a41",
+    "evals/fixtures/f08/pitch.md": "de831d8a42c073f6f5a41b581bb8aa2a882206ba3058026a7286ffcf59962357",
+    "evals/fixtures/f08/usage.csv": "18b99184bedbeeffb9762df901c699f6f5ef521e3196082a17ed22e5d4c7472e",
+    "evals/fixtures/f09/README.md": "d38b922fba28a6f309c2fcd2786df2fa65e2275758219f99b3a4a408338d92ec",
+    "evals/fixtures/f09/dossier.json": "e5865a324f5104db48707fc345d435b9dd411dc7d152f66bc082d9b8057cd06a",
+    "evals/fixtures/f09/first_session.md": "643d1fc921cd67cae4b22c475dcef88654a656be337cca57bf58d91645d5955f",
+    "evals/fixtures/f09/pitch.md": "586f2e36eecc586afe0a4e01b9822c215c47c8f9d4be9f5da607060ec7bee43a",
+    "evals/fixtures/f09/usage.csv": "9d77a6487486790880d18de613df2e38a776076e771d19a65d6d58762c40a33c",
+    "evals/fixtures/f10/README.md": "e3c0501611ee14dca7ab51c8990884f68fbdebd78bf241ce14083615f927ba76",
+    "evals/fixtures/f10/dossier.json": "dbbb51a3409120f26be2087e49a647a5d3cce7ecc9e71088b8f08ff706a663a7",
+    "evals/fixtures/f10/first_session.md": "9d2e9f6588c2dcc4479dfbca2e5834447f2a8d6c6535ec99292b8e0d211ca25b",
+    "evals/fixtures/f10/pitch.md": "f7c94f4f5e3d53f114d2892be2d338c2109f3d2edcb3d0642c9baa8e97fc2ccc",
+    "evals/fixtures/f10/usage.csv": "103fe5a1682a1120ce48b0d5eb8614430c0bbe78ba5bfd6fcf6c9eba8e8bb5bf",
+    "evals/fixtures/f11/README.md": "4aa42d3ba8464fe2aac2955d2c242276969c64d07ada95efea5946b15ef800a8",
+    "evals/fixtures/f11/dossier.json": "089572c386228ec8e486a10d681d56b74d9c1958f5d0495cc15293e84174ab4e",
+    "evals/fixtures/f11/first_session.md": "6e0f22765cf2ead4b64300c5b9a5fd6cdf272204020757b86c938eebf900cc79",
+    "evals/fixtures/f11/pitch.md": "4b8fcd72aa1120b9deeb2fa3de6d585f232353d9c7876c704adda1153c821d2d",
+    "evals/fixtures/f11/usage.csv": "2dd7d540096804ca2203b3e4c0dabf438f128ca49a7dc62c9aba6b8d6e71555a",
+    "evals/fixtures/f12/README.md": "7a872ccac046add8583bdc102c406fac6cbebfb37033a8b766bdc42fbbe61aaf",
+    "evals/fixtures/f12/dossier.json": "f73801917fb13e1884d804de304fb67cccde54866523044d91039a4b40cc53e3",
+    "evals/fixtures/f12/first_session.md": "e84b8ca870e6c71144326c82867790dc03fc0c50579c972e82b634c5375bc423",
+    "evals/fixtures/f12/pitch.md": "c0eea65c9c867ba62d82ade23a45f5e7f9b02d31442cfa1517c9341c82e6d1ca",
+    "evals/fixtures/f12/usage.csv": "1ae3461e015d0b63dd789b40ac710969df8cc6b07df3d948f9a9fe1a83af1e74",
+    "evals/fixtures/fictional_dates.py": "31c7d44bf36ffc9501b27a6801570b299f4476dd824a5734cf550a7478c95ac8",
+    "evals/fixtures/key.json": "73f4f3943af31afc21dc95ec4f92c1ae5a64b8f0439070c6382e88e2a3849591",
+    "evals/judge_rubric.md": "7158534bcacdf9a0264fa1ad143339db0eba39b817adb18cc79a3b1063d0d7ea",
+    "evals/metrics.py": "00c4a399561e17b2be148b5c97591af264d5433872524db4997fbf1edf7422af",
+    "evals/personas.json": "6986036d055237ba423856057f55b5f8e54cc092ccdf9f13f79fbe284fd97b4a",
+    "evals/pilot_reporting.py": "0af9d7dc51be4697788fb711a289158d046b173b70606f9919520d8aca917901",
+    "evals/placebo.txt": "7461ed3d49d9fb450c1754d8440db7d553f62bd58d6e8e311a0ef6c6df670250",
+    "evals/prompts.py": "941ad1659978b2b645cfea61e8993a15dbc58344726204d5cd41b99bbb4da303",
+    "evals/providers.py": "4467ef38d52780124c06a01cbea5e8096c5253954ecec4dc26f23909eb30c967",
+    "evals/reporting.py": "ee119c37b473b71d96c9e36274a2cde13c436e30926fb8c30b655da903ba4ec0",
+    "evals/requirements.txt": "ecc8280d7ad550e7f801cbc79e413a75b323c6580742936d4596991f38d79766",
+    "evals/run.py": "5c1862c56bad849b55d99c4eca6067323458e261daf9b3d2792dc3b55a59db94",
+    "evals/source_selection.py": "e6318ff3ca2e56954cdae6a284d5aa5723860cd1df5edd4080599999ecd75c12",
+    "evals/teams.json": "418bd75c7302bf9d1971ddde06bf079d59f9b8ab3b93688f310cd95c22e69ad3",
+    "evals/test_end_to_end.py": "983a2e3eb43c2e716e40b423a7c4f89f51fdeb906ce6522e1e35ee5ac8ab6a19",
+    "evals/test_metrics.py": "b1b3b28ea3dd278362de9e8cd14b4112ef64865c1eb552270b647a3b8b988ba0",
+    "evals/test_pilot_reporting.py": "c9be5b4ab3a1657ddeeb9195e74ff2e2f362c87088d02b1453599c3e1d345fdd",
+    "evals/test_runner.py": "8fb41aea9e068c99af718b7c975fd7557a808cb9f64593b0d50fdd010427ae95",
+    "evals/test_sources.py": "0a9dd0c609cd7952146d441ec3881ecdab128b28e8f9bfd3f9d1125e9b4b92c4",
+    "evals/validate.py": "5a51353dd771189513b6426bdb28278dbe2112f90d46fe863c8c34e3fa74784a"
+  },
+  "planned_main_trials": 18,
+  "planned_main_judgments": 36,
+  "bootstrap_resamples": 10000,
+  "pilot_gate": "two fixtures, one seed, all three conditions/tasks; transport/schema only, not treatment performance",
+  "coach_simulation": "one separately generated LLM builder script per fixture/seed, replayed unchanged across conditions",
+  "configuration_sha256": "b2a9de08ab02e399b34e59bd79e7b52b38f59eaae53ebf3358b37da9f27238d8",
+  "run_id": "v-f71c01ddbf18-b2a9de08ab02",
+  "record_path": "docs/evaluations/2026-10-23/v-f71c01ddbf18-b2a9de08ab02",
+  "source_commit_verification": {
+    "status": "verified",
+    "scope": [
+      "skills/worth-using/SKILL.md",
+      "skills/worth-using/references/rubric.md"
+    ],
+    "errors": []
+  }
+}

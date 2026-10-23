@@ -1,0 +1,26 @@
+{
+  "is_empirical": false,
+  "offline_tests": {
+    "passed": 67,
+    "command": "python3 -m unittest discover -s evals -p 'test_*.py' -q",
+    "scope": "Complete suite before final embedded-font PDF layout change"
+  },
+  "private_fixture_validation": "passed; separate private freeze",
+  "harness_file_hashes_match_manifest": true,
+  "treatment_source_commit": "8a3a3ac5c26b007d592c0f423f74b52c157e00e9",
+  "live_api_requests": 0,
+  "note": "Software verification only. No efficacy, cost or provider support measurements.",
+  "required_repo_checks": {
+    "isolated_public_copy": true,
+    "build": "passed",
+    "site_check": "passed: 38 local links/assets and 7 Markdown destinations",
+    "javascript_syntax": "passed"
+  },
+  "private_support_consistency_audit": "Passed: dates, log arithmetic, evidence support, clean control, and 216 team entries. Not an independent prose re-rating of every qualitative gold judgment.",
+  "final_pilot_regressions": {
+    "passed": 7,
+    "command": "python3 -m unittest discover -s evals -p 'test_pilot_reporting.py' -q"
+  },
+  "artifact_export": "Header-only CSV line endings normalized to LF; no data values changed.",
+  "pdf_visual_review": "Final one-page PDF rendered and inspected; embedded fonts, no clipping."
+}

@@ -1,0 +1,187 @@
+{
+  "status": "passed",
+  "is_empirical": false,
+  "fixtures": [
+    {
+      "id": "f01",
+      "category": "setup_wall",
+      "public_observations": 14,
+      "usage_rows": 6,
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "f02",
+      "category": "silent_failure",
+      "public_observations": 14,
+      "usage_rows": 6,
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "f03",
+      "category": "two_jobs",
+      "public_observations": 14,
+      "usage_rows": 6,
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "f04",
+      "category": "unsupported_quote",
+      "public_observations": 14,
+      "usage_rows": 6,
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "f05",
+      "category": "prompted_return",
+      "public_observations": 14,
+      "usage_rows": 6,
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "f06",
+      "category": "clean",
+      "public_observations": 14,
+      "usage_rows": 6,
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "f07",
+      "category": "setup_wall",
+      "public_observations": 14,
+      "usage_rows": 6,
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "f08",
+      "category": "silent_failure",
+      "public_observations": 14,
+      "usage_rows": 6,
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "f09",
+      "category": "two_jobs",
+      "public_observations": 14,
+      "usage_rows": 6,
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "f10",
+      "category": "unsupported_quote",
+      "public_observations": 14,
+      "usage_rows": 6,
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "f11",
+      "category": "prompted_return",
+      "public_observations": 14,
+      "usage_rows": 6,
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "f12",
+      "category": "clean",
+      "public_observations": 14,
+      "usage_rows": 6,
+      "weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "category_counts": {
+    "clean": 2,
+    "prompted_return": 2,
+    "setup_wall": 2,
+    "silent_failure": 2,
+    "two_jobs": 2,
+    "unsupported_quote": 2
+  },
+  "source_selection": "checkout",
+  "source_version": "f71c01ddbf1866f405b2ce5fec39e92bd6e3a1fb7cc558b2bdadc9c4d97a872e",
+  "source_words": 3163,
+  "placebo_words": 3083,
+  "errors": []
+}

@@ -1,0 +1,31 @@
+{
+  "repository": "michaeljabbour/amplifier-skill-worth-using",
+  "commit": "8a3a3ac5c26b007d592c0f423f74b52c157e00e9",
+  "source_acquisition": "checked-out source bytes",
+  "sources": [
+    {
+      "path": "skills/worth-using/SKILL.md",
+      "snapshot": "SKILL.snapshot.md",
+      "blob_sha": "3e642fb74f8fbb478e8fc56ab2df129c60f1b00c",
+      "sha256": "7886f3fb15c8e10eab7764315556a8dfde2da8627a096c4c30552b4ab9963d45"
+    },
+    {
+      "path": "skills/worth-using/references/rubric.md",
+      "snapshot": "rubric.snapshot.md",
+      "blob_sha": "ad9fffae678dd6ab0c66fa961cc227b53a682a34",
+      "sha256": "5bde8133b9c562e9588369f9693cd756714626ea217c6b56d7cc054150c79e77"
+    },
+    {
+      "path": "docs/BENCHMARK.md",
+      "snapshot": "BENCHMARK.snapshot.md",
+      "blob_sha": "dc6bea312458f33dff923bae4d8b2c868492383b",
+      "sha256": "c936c6b71cb24f0d994f0971286492f803588980a7df6397254af69f9b6eeb89"
+    },
+    {
+      "path": "AGENTS.md",
+      "snapshot": "AGENTS.snapshot.md",
+      "blob_sha": "bc224828991f04f37d44244090e0b4fa0e61eb8d",
+      "sha256": "a582aed39f77448af67393b67a2a460c87d46a5fe078840ea4ffcc63c42dc11f"
+    }
+  ]
+}

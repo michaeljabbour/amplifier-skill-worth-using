@@ -1,0 +1,50 @@
+[
+  {
+    "role": "eval",
+    "requested_model": null,
+    "requested_provider": "openai",
+    "returned_models": [],
+    "successful_requests": 0,
+    "failed_requests": 0,
+    "requested_temperature": 0.2,
+    "requested_max_tokens": 2400,
+    "accepted_request_temperatures": [],
+    "accepted_request_max_tokens": [],
+    "seeds_requested": [],
+    "seeds_sent": [],
+    "seed_support_status": [],
+    "effective_setting_echo": "not returned by these provider responses"
+  },
+  {
+    "role": "judge",
+    "requested_model": null,
+    "requested_provider": "openai",
+    "returned_models": [],
+    "successful_requests": 0,
+    "failed_requests": 0,
+    "requested_temperature": 0.0,
+    "requested_max_tokens": 6000,
+    "accepted_request_temperatures": [],
+    "accepted_request_max_tokens": [],
+    "seeds_requested": [],
+    "seeds_sent": [],
+    "seed_support_status": [],
+    "effective_setting_echo": "not returned by these provider responses"
+  },
+  {
+    "role": "simulator",
+    "requested_model": null,
+    "requested_provider": "openai",
+    "returned_models": [],
+    "successful_requests": 0,
+    "failed_requests": 0,
+    "requested_temperature": 0.2,
+    "requested_max_tokens": 3500,
+    "accepted_request_temperatures": [],
+    "accepted_request_max_tokens": [],
+    "seeds_requested": [],
+    "seeds_sent": [],
+    "seed_support_status": [],
+    "effective_setting_echo": "not returned by these provider responses"
+  }
+]

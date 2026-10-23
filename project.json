@@ -1,0 +1,21 @@
+{
+  "name": "amplifier-skill-worth-using",
+  "displayName": "Worth Using",
+  "version": "0.1.0",
+  "description": "A usefulness rubric and coaching skill: scores whether a tool is genuinely useful to someone who didn't build it, with evidence on every rating, and coaches the builder to close the gaps. Includes a static explanatory site.",
+  "license": "MIT",
+  "private": false,
+  "runtime": "Python >=3.11 (build only); browser (static site)",
+  "dependencies": [],
+  "skill": "skills/worth-using/SKILL.md",
+  "amplifierBundle": "bundle.md",
+  "build": "python3 scripts/build.py",
+  "check": "python3 scripts/check.py",
+  "output": "_site",
+  "publication": "Public source repository. Static site publishes to GitHub Pages from main.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaeljabbour/amplifier-skill-worth-using.git"
+  },
+  "homepage": "https://michaeljabbour.github.io/amplifier-skill-worth-using/"
+}

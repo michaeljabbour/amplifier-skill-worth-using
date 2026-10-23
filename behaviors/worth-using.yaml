@@ -1,0 +1,32 @@
+bundle:
+  name: worth-using-behavior
+  version: 0.1.0
+  description: |
+    Wires the worth-using skill (tool-skills), the /useful mode (hooks-mode), and a
+    staged recipe (tool-recipes) onto a host bundle. Adds no context of its own;
+    the skill, mode, and recipe load only when used.
+
+includes:
+  - bundle: git+https://github.com/microsoft/amplifier-bundle-modes@main#subdirectory=behaviors/modes.yaml
+
+hooks:
+  - module: hooks-mode
+    source: git+https://github.com/microsoft/amplifier-bundle-modes@main#subdirectory=modules/hooks-mode
+    config:
+      search_paths:
+        - "@worth-using:modes"
+
+tools:
+  - module: tool-skills
+    source: git+https://github.com/microsoft/amplifier-bundle-skills@main#subdirectory=modules/tool-skills
+    config:
+      # An @mention resolves against the bundle cache (or the local checkout), so
+      # the skill never drifts from this repo. A relative path would resolve
+      # against the session's working directory instead.
+      skills:
+        - "@worth-using:skills"
+  - module: tool-recipes
+    source: git+https://github.com/microsoft/amplifier-bundle-recipes@main#subdirectory=modules/tool-recipes
+    config:
+      session_dir: ~/.amplifier/projects/{project}/recipe-sessions
+      auto_cleanup_days: 7

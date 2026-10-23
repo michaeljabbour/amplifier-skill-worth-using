@@ -1,0 +1,9 @@
+_site/
+.work/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.worth-using/
+**/recipe-sessions/
+*.png

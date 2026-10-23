@@ -1,0 +1,472 @@
+{
+ "name": "Worth Using",
+ "version": "0.1.0",
+ "description": "A usefulness rubric with a coach: scores whether a tool is genuinely useful to someone who didn't build it, with evidence on every rating, and helps the builder and their team close the gaps.",
+ "skill_name": "worth-using",
+ "theme": {
+  "family": "Amplifier Smart Tools",
+  "version": "0.1.0",
+  "accent": "#3f6b4a"
+ },
+ "criteria": [
+  "Job",
+  "First value",
+  "Fit",
+  "Outcome",
+  "Trust",
+  "Return"
+ ],
+ "dimensions": [
+  "Perspective",
+  "Specificity",
+  "Evidence",
+  "Calibration",
+  "Subtraction"
+ ],
+ "examples": [
+  {
+   "id": "lab",
+   "label": "A genomics lab's sample-sheet checker",
+   "outcome": "Stranger-ready in round two. Return not yet shown.",
+   "brief": "A lab wrote a command-line tool that catches bad sample sheets before a sequencing run. The lab loves it. Three other labs installed it once. Target: stranger-ready.",
+   "started": "It's a flexible, config-driven validation framework for sequencing metadata.",
+   "got_to": "Run it on your sample sheet before you book the sequencer. It lists the rows that will fail, and why.",
+   "rubric": [
+    {
+     "criterion": "Job",
+     "from": "Partial",
+     "from_ev": "Claimed",
+     "to": "Solid",
+     "to_ev": "Seen",
+     "note": "Core-facility staff, checking sheets before every Monday booking"
+    },
+    {
+     "criterion": "First value",
+     "from": "Missing",
+     "from_ev": "Claimed",
+     "to": "Solid",
+     "to_ev": "Seen",
+     "note": "A postdoc gave up at the config file after 25 minutes. After the cut, a second stranger got a result in three."
+    },
+    {
+     "criterion": "Fit",
+     "from": "Partial",
+     "from_ev": "Claimed",
+     "to": "Solid",
+     "to_ev": "Seen",
+     "note": "Runs on the spreadsheet they already export"
+    },
+    {
+     "criterion": "Outcome",
+     "from": "Partial",
+     "from_ev": "Claimed",
+     "to": "Solid",
+     "to_ev": "Seen",
+     "note": "The facility manager: \"that's the email I send twice a week\""
+    },
+    {
+     "criterion": "Trust",
+     "from": "Missing",
+     "from_ev": "Claimed",
+     "to": "Solid",
+     "to_ev": "Seen",
+     "note": "It used to skip unknown columns silently. Now it lists what it skipped."
+    },
+    {
+     "criterion": "Return",
+     "from": "Missing",
+     "from_ev": "Claimed",
+     "to": "Missing",
+     "to_ev": "Claimed",
+     "note": "Not observable yet. Return check set for two weeks."
+    }
+   ],
+   "checkpoints": [
+    "Open",
+    "Name",
+    "Watch",
+    "Break",
+    "Say",
+    "Check",
+    "Watch",
+    "Break",
+    "Check",
+    "Close"
+   ],
+   "round_breaks": [
+    6
+   ],
+   "trace": {
+    "Perspective": [
+     1,
+     1,
+     2,
+     2,
+     2,
+     2,
+     3,
+     3,
+     3,
+     3
+    ],
+    "Specificity": [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     3,
+     3,
+     3,
+     3
+    ],
+    "Evidence": [
+     1,
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     2,
+     3,
+     3
+    ],
+    "Calibration": [
+     2,
+     2,
+     1,
+     1,
+     2,
+     2,
+     2,
+     2,
+     3,
+     3
+    ],
+    "Subtraction": [
+     1,
+     1,
+     2,
+     2,
+     2,
+     2,
+     3,
+     2,
+     3,
+     3
+    ]
+   },
+   "dips": [
+    {
+     "dimension": "Calibration",
+     "at": 2,
+     "note": "Calibration drops at the first Watch: the builder had rated First value Solid, then watched a postdoc give up at the config file."
+    },
+    {
+     "dimension": "Subtraction",
+     "at": 7,
+     "note": "Subtraction slips at the second Break: faced with confusing error text, the builder proposed a web dashboard before shortening the messages."
+    }
+   ],
+   "decisions": [
+    "Name the user: core-facility staff over principal investigators, because \"PIs never touch the sheet; the facility gets the angry email.\"",
+    "Watch: cut the config file to one optional flag over writing a setup guide, because \"a guide is a confession.\"",
+    "Break: list every skipped column over failing hard, because \"they still need to book the run.\""
+   ],
+   "return_check": "Facility staff · in two weeks · they run it before a Monday booking without a reminder",
+   "cut": "The 40-line config file, now one optional flag",
+   "next": "Start on Evidence. Run the return check before changing anything else."
+  },
+  {
+   "id": "notes",
+   "label": "A team's meeting-notes bot",
+   "outcome": "Worth using, after cutting the summary",
+   "brief": "An internal tools team built a bot that posts a summary of every meeting to team chat. Week one, everyone read them. By week four, almost nobody did. Three teammates scored it alone first and rated Return Solid, Partial, and Missing. Round two ran two weeks after the change shipped.",
+   "started": "It uses AI to summarize every meeting so nobody misses anything.",
+   "got_to": "Action items from the meeting land in the tracker, with an owner, before you're back at your desk.",
+   "rubric": [
+    {
+     "criterion": "Job",
+     "from": "Partial",
+     "from_ev": "Claimed",
+     "to": "Solid",
+     "to_ev": "Seen",
+     "note": "The person who leaves a meeting owning an action item"
+    },
+    {
+     "criterion": "First value",
+     "from": "Solid",
+     "from_ev": "Seen",
+     "to": "Solid",
+     "to_ev": "Seen",
+     "note": "Nothing to set up: invite the bot, get the items"
+    },
+    {
+     "criterion": "Fit",
+     "from": "Partial",
+     "from_ev": "Seen",
+     "to": "Solid",
+     "to_ev": "Seen",
+     "note": "Posts to the tracker they already open, not a new channel"
+    },
+    {
+     "criterion": "Outcome",
+     "from": "Missing",
+     "from_ev": "Seen",
+     "to": "Solid",
+     "to_ev": "Seen",
+     "note": "Before: \"it's a nice summary.\" After: \"I stopped writing follow-up emails.\""
+    },
+    {
+     "criterion": "Trust",
+     "from": "Partial",
+     "from_ev": "Seen",
+     "to": "Solid",
+     "to_ev": "Seen",
+     "note": "Owners it had to guess are marked as guesses"
+    },
+    {
+     "criterion": "Return",
+     "from": "Missing",
+     "from_ev": "Seen",
+     "to": "Solid",
+     "to_ev": "Repeated",
+     "note": "Summary reads fell from about 40 a week to 3. After the change, four teams kept it on for two weeks unprompted, and one asked for it back within an hour when it broke."
+    }
+   ],
+   "checkpoints": [
+    "Open",
+    "Name",
+    "Watch",
+    "Break",
+    "Say",
+    "Check",
+    "Name",
+    "Say",
+    "Check",
+    "Close"
+   ],
+   "round_breaks": [
+    6
+   ],
+   "trace": {
+    "Perspective": [
+     2,
+     2,
+     2,
+     2,
+     1,
+     2,
+     3,
+     3,
+     3,
+     3
+    ],
+    "Specificity": [
+     1,
+     2,
+     2,
+     2,
+     2,
+     2,
+     3,
+     3,
+     3,
+     3
+    ],
+    "Evidence": [
+     2,
+     2,
+     2,
+     2,
+     2,
+     3,
+     3,
+     3,
+     3,
+     3
+    ],
+    "Calibration": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     2,
+     2,
+     1,
+     3,
+     3
+    ],
+    "Subtraction": [
+     1,
+     1,
+     1,
+     1,
+     2,
+     2,
+     3,
+     3,
+     3,
+     3
+    ]
+   },
+   "dips": [
+    {
+     "dimension": "Perspective",
+     "at": 4,
+     "note": "Perspective drops at Say what changed: asked for the outcome in the user's words, the builder saw that \"nobody misses anything\" was the team's goal, not the user's."
+    },
+    {
+     "dimension": "Calibration",
+     "at": 7,
+     "note": "Calibration slips at the second Say: the builder rated the new outcome Solid from one enthusiastic team, before reading the other three teams' logs."
+    }
+   ],
+   "decisions": [
+    "Team score: report Return as Missing, the rating backed by the logs, over an average of three opinions, because \"the logs are the only one of us who isn't guessing.\"",
+    "Say what changed: cut the summary and keep the action items, because \"nobody reread the summary; they hunted for their own name.\"",
+    "Fit: post to the tracker over the chat channel, because \"that's where they look when they sit down.\""
+   ],
+   "return_check": "Owners of action items · two weeks after the change · items opened by their owner without a reminder. Met in the logs.",
+   "cut": "The meeting summary itself",
+   "next": "Start on Calibration. Rate before you watch; the gap is the lesson."
+  },
+  {
+   "id": "campus",
+   "label": "A student-built course planner that stalled",
+   "outcome": "Stopped after one round: no real job yet",
+   "brief": "Two students built an app that plans four years of courses. Friends say it's great. Most of its use is the builders. Target: stranger-ready.",
+   "started": "It's the smartest way to plan your degree.",
+   "got_to": "We don't know who has this job yet. Advisors might. We're going to watch three advising sessions.",
+   "rubric": [
+    {
+     "criterion": "Job",
+     "from": "Missing",
+     "from_ev": "Claimed",
+     "to": "Partial",
+     "to_ev": "Claimed",
+     "note": "Maybe advisors before registration week. Not yet seen."
+    },
+    {
+     "criterion": "First value",
+     "from": "Partial",
+     "from_ev": "Claimed",
+     "to": "Partial",
+     "to_ev": "Seen",
+     "note": "A first-year built a plan in 20 minutes, then asked what it was for"
+    },
+    {
+     "criterion": "Fit",
+     "from": "Missing",
+     "from_ev": "Claimed",
+     "to": "Missing",
+     "to_ev": "Seen",
+     "note": "Every course has to be typed in by hand"
+    },
+    {
+     "criterion": "Outcome",
+     "from": "Missing",
+     "from_ev": "Claimed",
+     "to": "Missing",
+     "to_ev": "Seen",
+     "note": "Nobody could say what changed after planning"
+    },
+    {
+     "criterion": "Trust",
+     "from": "Partial",
+     "from_ev": "Claimed",
+     "to": "Partial",
+     "to_ev": "Claimed",
+     "note": "Prerequisite rules are guessed from the catalog"
+    },
+    {
+     "criterion": "Return",
+     "from": "Missing",
+     "from_ev": "Claimed",
+     "to": "Missing",
+     "to_ev": "Seen",
+     "note": "Nobody outside the team opened it twice"
+    }
+   ],
+   "checkpoints": [
+    "Open",
+    "Name",
+    "Watch",
+    "Break",
+    "Say",
+    "Check",
+    "Close"
+   ],
+   "round_breaks": [],
+   "trace": {
+    "Perspective": [
+     1,
+     1,
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "Specificity": [
+     1,
+     2,
+     2,
+     2,
+     1,
+     1,
+     2
+    ],
+    "Evidence": [
+     1,
+     1,
+     2,
+     2,
+     2,
+     2,
+     3
+    ],
+    "Calibration": [
+     2,
+     2,
+     1,
+     1,
+     1,
+     1,
+     2
+    ],
+    "Subtraction": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ]
+   },
+   "dips": [
+    {
+     "dimension": "Calibration",
+     "at": 2,
+     "note": "Calibration drops at Watch: the builders expected a first-year to love it, and watched her finish a plan and ask what it was for."
+    },
+    {
+     "dimension": "Specificity",
+     "at": 4,
+     "note": "Specificity drops at Say what changed: nobody could name what was different for any one student, and the named user dissolved."
+    }
+   ],
+   "decisions": [
+    "Check for return: stop after one round over a second, because \"we keep polishing a planner nobody asked for.\"",
+    "Name the user: watch advisors next over more students, because \"advisors do this every semester; students do it once a year.\""
+   ],
+   "return_check": "None set. There is no user with a recurring job yet.",
+   "cut": "Nothing. The problem is upstream.",
+   "next": "Start on Specificity. Watch three advising sessions before touching the code."
+  }
+ ]
+}

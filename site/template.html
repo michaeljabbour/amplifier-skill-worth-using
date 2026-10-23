@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="@@DESCRIPTION@@">
+  <meta name="theme-color" content="#f6f4ee">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta property="og:title" content="Worth Using">
+  <meta property="og:description" content="Useful to someone who isn't you. A usefulness rubric with a coach.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/social-card.svg">
+  <title>@@NAME@@ | An Amplifier skill</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/family.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src="./assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="attribution"><div class="wrap"><span>A usefulness rubric for builders and teams</span><span>Every score carries its evidence.</span></div></div>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="#main" aria-label="Worth Using home"><span class="brand-mark" aria-hidden="true"></span><span><b>Amplifier</b><small>Skills for thoughtful work</small></span></a>
+    <nav class="nav" aria-label="Main navigation"><a href="#rubric">Rubric</a><a href="#score">Score</a><a href="#explore">Runs</a><a href="#method">Method</a><a href="#team">Teams</a><a href="#bar">The bar</a><a class="nav-use" href="#use-skill">Use the skill</a></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="hero fit-hero" aria-labelledby="hero-title">
+    <div class="hero-grid">
+      <div><p class="eyebrow">A usefulness rubric, with a coach</p><h1 id="hero-title">Worth<br>Using</h1><p class="promise">Useful to someone who isn't you.<br>Build what people come back to.</p></div>
+      <div class="hero-intro"><p class="lede">Every tool is useful to the person who built it. That's the one audience it can't surprise. This skill scores your tool the way a stranger meets it, on six plain criteria, and helps you and your team close the gaps.</p><p>Score it in ten minutes before a review, or run a short coaching loop. Every rating carries its evidence: claimed, seen, or repeated. You get a usefulness card for the tool and, when coached, a growth card for you.</p><div class="actions"><a class="button primary" href="#score">Score a tool</a><a class="text-link" href="#rubric">Read the rubric</a><a class="text-link" href="#use-skill">Get the skill</a></div><p class="note hero-note">Examples are fictional. The benchmark hasn't run yet. <a href="#bar">See the bar it has to clear.</a></p></div>
+    </div>
+  </section>
+
+  <section id="rubric" class="section rubric-section" aria-labelledby="rubric-title">
+    <div class="section-heading"><div><p class="eyebrow">Six criteria, one user at a time</p><h2 id="rubric-title">The rubric.</h2></div><p>Each criterion asks one question about one named user. Rate it Missing, Partial, or Solid. The six are never added up: a tool that nails five and fails Trust is not "83% useful." It's a tool people stop trusting.</p></div>
+    <div class="level-head rubric-head" aria-hidden="true"><span>Criterion</span><span>Missing</span><span>Partial</span><span>Solid</span></div>
+    <ol class="level-list rubric-list">@@CRITERIA@@</ol>
+    <div class="evidence-band">
+      <div><p class="eyebrow">Every rating carries one</p><h3>Evidence, graded.</h3><p>How sure you sound is not evidence. A claim stays a claim until someone who isn't on the team uses the tool. Reading the code is never Seen.</p></div>
+      <ol class="grade-list">@@EVIDENCE@@</ol>
+    </div>
+    <div class="zones">
+      <div class="zone z-ready"><p class="eyebrow">Zone one</p><h3>Stranger-ready.</h3><p>Job, First value, Fit, Outcome, and Trust are all Solid, and each has been seen with someone outside the team.</p></div>
+      <div class="zone z-worth"><p class="eyebrow">Zone two</p><h3>Worth using.</h3><p>Stranger-ready, plus Return is Solid and repeated: people came back without being asked. That usually takes days, so a session ends at zone one and sets a return check.</p></div>
+    </div>
+  </section>
+
+  <section id="score" class="section score-section" aria-labelledby="score-title">
+    <div class="section-heading"><div><p class="eyebrow">Ten minutes, before the next review</p><h2 id="score-title">Score a tool.</h2></div><p>Pick a tool and one person it's for. Rate each criterion and say how you know. If you're scoring as a team, everyone fills this in alone first, then compares. Nothing you enter leaves this page.</p></div>
+    <div class="scorer">
+      <div class="scorer-inputs">
+        <label for="tool-name">Tool</label><input id="tool-name" type="text" autocomplete="off" placeholder="What did you build?">
+        <label for="tool-user">User and job</label><input id="tool-user" type="text" autocomplete="off" placeholder="Who, doing what, every week?">
+      </div>
+      <div class="table-scroll"><table class="scorer-table"><thead><tr><th scope="col">Criterion</th><th scope="col" id="rating-head">Rating</th><th scope="col" id="grade-head">Evidence</th></tr></thead><tbody>@@SCORER_ROWS@@</tbody></table></div>
+      <div class="scorer-result" role="status" aria-live="polite"><p class="verdict" id="verdict">No zone yet.</p><p id="holding">Rate the six criteria. Missing everywhere is an honest place to start.</p></div>
+      <div class="scorer-actions"><button type="button" class="button primary" id="copy-card">Copy usefulness card</button><button type="button" class="button" id="reset-card">Start over</button><p class="copy-status" id="card-status" role="status" aria-live="polite"></p></div>
+      <pre id="card-text" class="card-text" hidden></pre>
+      <noscript><p class="note">This scorer needs JavaScript. The rubric above works as a paper checklist.</p></noscript>
+    </div>
+  </section>
+
+  <section id="explore" class="map-section" aria-labelledby="explore-heading">
+    <div class="map-heading"><h2 id="explore-heading">The tool gets better. So does the builder. Neither goes smoothly.</h2><p>Fictional runs, start to finish.</p></div>
+    <div class="map-shell">
+      <figure class="trace-figure" aria-labelledby="explore-heading" aria-describedby="trace-note">
+        <div class="map-topline"><span>The builder, at every checkpoint</span><span class="map-stamp" id="trace-stamp">@@FIRST_OUTCOME@@</span></div>
+        @@TRACES@@
+        <figcaption class="map-caption"><span class="legend"><i class="legend-level" aria-hidden="true"></i> Level after each pass <i class="legend-dip" aria-hidden="true"></i> A dip, labeled</span><p id="trace-note">E, D and S are Early, Developing and Strong. Each dimension is placed on its own and never averaged. Dips are kept and explained: watching a real user for the first time usually makes builders rate their own tool lower, and that is progress. Placements are illustrative, not measured.</p></figcaption>
+      </figure>
+      <div class="example-panel">
+        <label for="example-select">Pick a run</label>
+        <select id="example-select" aria-controls="example-panels">@@EXAMPLE_OPTIONS@@</select>
+        <div id="example-panels" aria-live="polite">@@EXAMPLE_PANELS@@</div>
+        <noscript><p class="note">The first run is shown. Enable JavaScript to switch runs. The <a href="./docs/EXAMPLES.md">worked example</a> is also available as text.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <section class="section two-col definitions" aria-labelledby="climbs-title">
+    <div><p class="eyebrow">Report them separately</p><h2 id="climbs-title">The tool is one climb.<br>You are another.</h2><p class="section-intro">A useful tool built by someone who can't see why will drift the moment they add the next feature. A builder with sharp judgment and no users has shipped nothing. The skill tracks both, and never lets one stand in for the other.</p><p class="note">Placements describe one person on one tool on one day. They are not grades of ability.</p></div>
+    <div class="axis-definitions"><article><span class="axis-letter">T</span><div><h3>The tool</h3><p>Six criteria, each with its evidence, for one named user. It ends as a usefulness card, even when the answer is "no zone yet."</p></div></article><article><span class="axis-letter">B</span><div><h3>The builder</h3><p>Whether you can see the tool the way a stranger does, grade your own evidence, and cut before you add. It ends as a growth card: where you started, where you got to, every dip, and every choice with your reason.</p></div></article></div>
+  </section>
+
+  <section id="method" class="section" aria-labelledby="method-title">
+    <div class="section-heading"><div><p class="eyebrow">Two modes, one exit</p><h2 id="method-title">Score it, or<br>coach it.</h2></div><p>Score is the rubric alone, for reviews and ship decisions. Coach is a bounded loop that improves the tool and your judgment together: you attempt first, the agent responds, and you make the call.</p></div>
+    <div class="gate-band"><div><h3>The exit rule comes first.</h3><p>Aim for the nearest zone. Three rounds at most.</p></div><p>A failed gate sends you back to <strong>that pass only</strong>, never through all five again. If a full round moves nothing, the problem is upstream: the wrong user, or no real job. The skill says so and stops.</p></div>
+    <ol class="method-steps pass-steps">
+      <li><h3>Name the user.</h3><p>"I made this for a specific person, who does a recurring job, which costs them this today."</p><p class="pass-meta"><span>Teaching move</span>You write the sentence first, then compare it with a vague one.</p><p class="pass-meta"><span>Gate</span>A role in a setting, a recurring job, a stated cost. Unknown means ask.</p></li>
+      <li><h3>Watch the first ten minutes.</h3><p>A real person who isn't on the team, or the agent playing a stranger who only has the README.</p><p class="pass-meta"><span>Teaching move</span>You predict the first stall before anyone watches.</p><p class="pass-meta"><span>Gate</span>One real result without you, or the stall named and a fix chosen.</p></li>
+      <li><h3>Break it on purpose.</h3><p>Feed it the input most likely to fool it: an empty file, a wrong format, a request it should refuse.</p><p class="pass-meta"><span>Teaching move</span>You pick the input. You know where it's weak.</p><p class="pass-meta"><span>Gate</span>When it's wrong, the user can tell and recover without you.</p></li>
+      <li><h3>Say what changed.</h3><p>What's different for the user afterwards, in their words, without adjectives.</p><p class="pass-meta"><span>Teaching move</span>Contrast pairs: "it's faster" next to "I stopped writing follow-up emails."</p><p class="pass-meta"><span>Gate</span>A change someone could observe.</p></li>
+      <li><h3>Check for return.</h3><p>Score all six, set the return check: who, when, and what counts as coming back.</p><p class="pass-meta"><span>Teaching move</span>You rate first. The gap between your rating and the evidence is the lesson.</p><p class="pass-meta"><span>Gate</span>The target zone, or the round budget.</p></li>
+    </ol>
+    <div class="stop-rule"><p><strong>Subtract before you add.</strong> Before any fix that adds something, the agent asks what could be removed instead. Most usefulness problems are too much tool, not too little.</p><p>Every pass ends with your choice, logged with what you turned down and your reason in your words. Every run ends with its cards, including runs that stop short. "No zone yet" with honest evidence beats a hopeful Solid.</p></div>
+  </section>
+
+  <section id="team" class="section two-col team-section" aria-labelledby="team-title">
+    <div><p class="eyebrow">For teams</p><h2 id="team-title">Score alone.<br>Then compare.</h2><p class="section-intro">When a team scores together out loud, everyone drifts toward the first confident voice. So each person rates alone, in writing, before anyone sees anyone else's. The disagreements are the most useful thing on the table.</p><p class="note">The team's rating is the one backed by the strongest evidence someone can point to; ties go to the lower rating. Never the average: an average of a guess and a log is still a guess.</p></div>
+    <ol class="team-steps"><li><b>Agree the user and the job</b><span>One sentence, before anyone rates.</span></li><li><b>Rate alone</b><span>All six criteria, in writing, with evidence.</span></li><li><b>Reveal together</b><span>Where two ratings differ by two levels, each person gives one sentence of evidence.</span></li><li><b>Keep the spread</b><span>Don't average. Record who said what and why.</span></li><li><b>Watch next</b><span>The disagreements become the agenda for the next real user you watch.</span></li></ol>
+  </section>
+
+  <section id="dimensions" class="section anchors-section" aria-labelledby="dimensions-title">
+    <div class="section-heading"><div><p class="eyebrow">Read through conversation, not a quiz</p><h2 id="dimensions-title">What it reads<br>in the builder.</h2></div><p>In Coach mode, a few plain questions first. After every pass, a fresh placement on five independent dimensions, each with its evidence. Nothing is scored out loud during the run.</p></div>
+    <div class="level-head" aria-hidden="true"><span>Dimension</span><span>Early</span><span>Developing</span><span>Strong</span></div>
+    <ol class="level-list">@@DIMENSIONS@@</ol>
+    <p class="note anchor-note">Never averaged into one number. A run can end below where it started on a dimension, and the card says so.</p>
+  </section>
+
+  <section id="teaching" class="section two-col questions-section" aria-labelledby="teaching-title">
+    <div><p class="eyebrow">Attempt first, always</p><h2 id="teaching-title">How it<br>teaches.</h2><p class="section-intro">Answer-first help builds dependence. Here you rate first, predict first, and pick the input that breaks your own tool. The support fades as you take over.</p>
+      <div class="fade-steps" role="list"><div role="listitem"><small>Round 1</small><b>Agent shows</b><span>A short worked example, then your turn.</span><i class="carry-100" aria-hidden="true"></i></div><div role="listitem"><small>Round 2</small><b>Together</b><span>You lead. Prompts only at the gates.</span><i class="carry-55" aria-hidden="true"></i></div><div role="listitem"><small>Round 3</small><b>You lead</b><span>The agent checks gates and asks why.</span><i class="carry-20" aria-hidden="true"></i></div></div>
+      <p class="note">The bar shows how much of the work the agent carries. A returning builder starts at the level their last growth card recommends.</p>
+    </div>
+    <div><h3 class="question-heading">Eight teaching moves</h3><ol class="question-list move-list">@@MOVES@@</ol></div>
+  </section>
+
+  <section class="section two-col voice-section" aria-labelledby="voice-title">
+    <div><p class="eyebrow">Verdict first. One question. A little dry.</p><h2 id="voice-title">It sounds like<br>a good reviewer.</h2><p class="section-intro">People listen to a reviewer who is quick and has a pulse. The first sentence carries the verdict. Humor goes at the situation, the tool, or the agent itself. Never at you.</p><h3 class="question-heading">Opening questions</h3><ol class="question-list">@@QUESTIONS@@</ol></div>
+    <div class="chat" aria-label="Sample exchange">
+      <p class="chat-row"><span>You</span>It's a flexible, config-driven validation framework.</p>
+      <p class="chat-row chat-not"><span>Not this</span>What a powerful tool! Here are twelve ways to make it even more useful.</p>
+      <p class="chat-row chat-agent"><span>Agent</span>You built it, so you're the one person it can't surprise. Who used it last week who isn't you?</p>
+      <p class="chat-row"><span>You</span>Three labs installed it.</p>
+      <p class="chat-row chat-agent"><span>Agent</span>Installed is a claim. Did anyone run it twice?</p>
+      <p class="chat-row chat-agent"><span>Later</span>Your calibration dropped. That's what watching a real user does. Welcome.</p>
+    </div>
+  </section>
+
+  <section id="diagnosis" class="section" aria-labelledby="diagnosis-title">
+    <div class="section-heading"><div><p class="eyebrow">Diagnose, don't repeat</p><h2 id="diagnosis-title">Why people<br>drift away.</h2></div><p>When a gate fails or a criterion stays Missing, the agent names the symptom, the likely cause, and the one pass to revisit. This is where most of the learning happens.</p></div>
+    <div class="table-scroll"><table class="evidence-table"><thead><tr><th scope="col">Symptom</th><th scope="col">Likely cause</th><th scope="col">Return to</th></tr></thead><tbody>@@DIAGNOSIS@@</tbody></table></div>
+  </section>
+
+  <section id="bar" class="section" aria-labelledby="bar-title">
+    <div class="section-heading"><div><p class="eyebrow">Not yet run · thresholds are proposals</p><h2 id="bar-title">The bar it<br>has to clear.</h2></div><p>Twelve fictional tools with planted flaws and usage logs, four simulated builders, three simulated teams, five real builders, and a no-skill control. Two judges score blind. The test that matters most: does the skill ever call something Seen that nobody saw?</p></div>
+    <div class="table-scroll"><table class="evidence-table bar-table"><thead><tr><th scope="col">Test</th><th scope="col">Passes if</th><th scope="col">Guards against</th></tr></thead><tbody>@@BENCHMARK@@</tbody></table></div>
+    <p class="note anchor-note">Passing would show the skill behaves as designed in these exercises, not that scored tools gain users or that judgment improves for good. <a href="./docs/BENCHMARK.md">Read the full plan.</a></p>
+  </section>
+
+  <section id="use-skill" class="section use-section" aria-labelledby="use-title"><div class="section-heading"><div><p class="eyebrow">Bring it to your agent</p><h2 id="use-title">A small skill.<br>A more useful tool.</h2></div><p>Use the instructions in a host that supports skills, or give them to your assistant with your tool and who you think it's for. Expect a usefulness card back, even if the answer is "no zone yet."</p></div>
+    <div class="use-grid"><div class="prompt-box"><div class="prompt-top"><span>A starting prompt</span><button type="button" class="copy-button" data-copy="starting-prompt">Copy prompt</button></div><pre id="starting-prompt">Use worth-using on [my tool]. I built it for [who, doing what]. Score it first: six criteria, evidence on every rating, and tell me plainly where a stranger would stall. Then, if I ask, coach me: I rate first, I predict first, I choose. Three rounds at most. End with a usefulness card, and a growth card if we coached.</pre><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p></div>
+    <div class="skill-download"><h3>Take the instructions with you.</h3><p>The download contains this project's canonical <code>SKILL.md</code>. The bundle also includes <code>references/rubric.md</code>: the six criteria, evidence grades, zones, team scoring, questions, dimensions, teaching moves, diagnosis, card templates, and voice.</p><div class="actions"><a class="button primary" href="./worth-using.zip" download>Download skill bundle</a><a class="text-link" href="./SKILL.md" download="SKILL.md">Download SKILL.md</a></div><div class="compact-links"><a href="#skill-source">Read or copy the source</a><a href="./README.md">README</a><a href="./docs/EXAMPLES.md">Worked example</a><a href="./docs/BENCHMARK.md">Benchmark plan</a></div><p class="note">No account, backend, model call, or tracking on this site. Your host's capabilities and permissions still apply.</p></div></div>
+    <details id="skill-source" class="skill-source"><summary>Read and copy SKILL.md</summary><div class="source-actions"><label for="skill-text">Canonical skill source</label><button type="button" class="button" data-copy="skill-text">Copy SKILL.md</button></div><textarea id="skill-text" readonly spellcheck="false" aria-label="Canonical SKILL.md source">@@SKILL_SOURCE@@</textarea><p id="skill-copy-status" class="note" role="status" aria-live="polite"></p><p class="note">Keep the <a href="./references/rubric.md">rubric reference</a> alongside the skill when installing it.</p></details>
+  </section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-top"><a class="brand" href="#main"><span class="brand-mark" aria-hidden="true"></span><span><b>Worth Using</b><small>An Amplifier skill</small></span></a><nav class="nav" aria-label="Footer navigation"><a href="#rubric">Rubric</a><a href="#score">Score</a><a href="#use-skill">Use the skill</a><a href="./LICENSE">License</a></nav></div><div class="footer-bottom"><span>Useful to someone who isn't you.</span><span>Family theme adapted from Amplifier Smart Tools, MIT licensed. Independent skill project.</span></div></div></footer>
+</body>
+</html>

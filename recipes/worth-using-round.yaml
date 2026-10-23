@@ -1,0 +1,173 @@
+# One bounded Worth Using coaching round, following @worth-using:skills/worth-using/SKILL.md.
+# The recipe only sequences the skill and puts the builder at each decision. The
+# method itself lives in the skill.
+#
+# Usage:
+#   recipes(operation="execute", recipe_path="@worth-using:recipes/worth-using-round.yaml",
+#           context={"tool": "README.md",
+#                    "user": "Core-facility staff who check sample sheets before sequencing runs",
+#                    "target": "stranger-ready"})
+#   # Pauses after "read". Answer the opening questions and give your six ratings:
+#   recipes(operation="approve", session_id="<id>", stage_name="read",
+#           message="1. <who used it, and when> ... Ratings: Job <rating> ...")
+#   recipes(operation="resume", session_id="<id>")
+#   # Pauses after "passes". Choose at each pass and give your reasons:
+#   recipes(operation="approve", session_id="<id>", stage_name="passes",
+#           message="Name the user: keep B because ... Watch: I predict they stall at ...")
+#   recipes(operation="resume", session_id="<id>")
+#   # Deny at either gate to stop. A denied run writes no cards; the skill
+#   # offers them in conversation instead.
+#
+# Nothing in the user's work is edited. The cards are written under work_dir.
+#
+# Why this recipe is legacy (no schema_version: 2): every step runs as
+# `agent: self`, the calling session's own agent. That session has the
+# worth-using bundle loaded, so the @worth-using: skill paths resolve and the step
+# can read files. A v2 closure refuses `self` and would also have to carry this
+# bundle itself so those mentions resolve.
+
+name: worth-using-round
+description: "One bounded Worth Using round: an opening read of the builder, five passes with the builder choosing at each, then a usefulness card and a growth card."
+version: "1.0.0"
+
+context:
+  tool:
+    type: string
+    required: true
+    description: "Path to the tool, or to material describing it (never modified)"
+  user:
+    type: string
+    required: true
+    description: "Who the tool is for, as the builder currently sees it"
+  target:
+    type: string
+    default: "stranger-ready"
+    description: "stranger-ready, worth-using, or another observable result (agreed at the read gate)"
+  work_dir:
+    type: string
+    default: ".worth-using"
+  budget:
+    type: string
+    default: "3"
+    description: "Maximum rounds, counted from cards already in work_dir"
+  # The executor injects this at approval time. Declaring it here lets the
+  # static validator accept {{_approval_message}}.
+  _approval_message: ""
+
+stages:
+  - name: read
+    steps:
+      - id: opening-read
+        agent: self
+        prompt: |
+          First read_file @worth-using:skills/worth-using/SKILL.md and
+          @worth-using:skills/worth-using/references/rubric.md. Follow them.
+          This prompt frames only the opening read of a Coach run.
+
+          Inputs:
+          - Tool: {{tool}}
+          - User as the builder sees it: {{user}}
+          - Target: {{target}}
+          - Prior cards: {{work_dir}}/ (count prior rounds as files named growth-card-*.md)
+          - Round budget: {{budget}}
+
+          Read the tool. If prior rounds >= {{budget}}, say so plainly, recommend
+          stopping, and ask only whether the builder wants to raise the budget.
+
+          You cannot talk to the builder during this step. Do not answer your own
+          questions. Edit nothing. Return, briefly and verdict first:
+
+          1. Round: N of {{budget}}. If a prior growth card exists, the dimension and
+             scaffold level it recommends starting from.
+          2. Opening questions: three to five from rubric.md, numbered, chosen for
+             this tool.
+          3. A request for the builder's own six ratings (Missing, Partial, Solid)
+             before seeing yours.
+          4. Target: restate it, or propose the nearest zone.
+          5. What you can already see in the tool, all labeled CLAIMED. If the
+             material reports what a real user did, quote it as REPORTED and ask the
+             builder to confirm it; only the builder's confirmation can make it Seen.
+        output: read_prompt
+    approval:
+      required: true
+      prompt: |
+        {{read_prompt}}
+
+        ---
+        Approve with a message that answers the numbered questions in your own
+        words, gives your six ratings, and confirms or rewrites the target. Deny to
+        stop. Nothing has been written.
+
+  - name: passes
+    steps:
+      - id: five-passes
+        agent: self
+        prompt: |
+          First read_file @worth-using:skills/worth-using/SKILL.md and
+          @worth-using:skills/worth-using/references/rubric.md. Follow them.
+
+          Inputs:
+          - Tool: {{tool}}
+          - Opening read: {{read_prompt}}
+          - The builder's answers and ratings, verbatim. They override your
+            inferences: {{_approval_message}}
+
+          Place the builder privately on the five dimensions with evidence. Then
+          prepare the five passes for the builder to work through. You cannot talk
+          to them during this step, so for each pass give:
+          - the gate, and whether their answers already meet it (pass, fail, unknown)
+          - Name the user: their job sentence as written, plus one contrast pair
+          - Watch: a request to predict the first stall, then your own cold
+            walkthrough as the stranger, following only the README and the screen,
+            narrating each guess. Label it CLAIMED.
+          - Break: three candidate inputs most likely to fool the tool; ask which to run
+          - Say what changed: their outcome sentence, and the question "what would
+            the user say, without adjectives?"
+          - Check for return: a confidence question (low, medium, high), then a
+            proposed return check (who, when, what counts)
+          For any failed gate, ask what could be removed before suggesting anything
+          to add. Never invent users, quotes, or usage; mark them UNKNOWN and ask.
+          Verdict first, one question per pass, under sixty words per pass.
+        output: passes
+        timeout: 1200
+    approval:
+      required: true
+      prompt: |
+        {{passes}}
+
+        ---
+        Approve with a message that makes your choice at each pass, names what you
+        turned down, and gives your reason. Answer the prediction, the break input,
+        and the confidence question. Report anything you watched a real user do.
+        Deny to stop without writing cards.
+
+  - name: close
+    steps:
+      - id: write-cards
+        agent: self
+        prompt: |
+          First read_file @worth-using:skills/worth-using/SKILL.md and
+          @worth-using:skills/worth-using/references/rubric.md. Follow them.
+
+          Inputs:
+          - Opening read: {{read_prompt}}
+          - Passes offered: {{passes}}
+          - The builder's choices, reasons, and observations, verbatim:
+            {{_approval_message}}
+          - Work dir: {{work_dir}}
+
+          1. Rate the six criteria with evidence. Use Seen only for what the builder
+             reports a real person outside the team doing; everything else is
+             Claimed. Say which zone, if any, is met, and which criteria hold it back.
+          2. Compare the builder's opening ratings with yours, criterion by criterion.
+          3. Re-place the builder on the five dimensions using only evidence from
+             their answers. Keep any dips and label each with its likely cause. Mark
+             reasons the builder did not give as missing, never fill them in.
+          4. Write, using the templates in rubric.md, to {{work_dir}}/:
+             - usefulness-card-round-N.md (include the return check)
+             - growth-card-round-N.md (decision log uses the builder's words)
+             Read both back to confirm they exist. Edit nothing else.
+          5. Return the two cards and one question for next time.
+          Claim no use, return, or improvement that nobody observed.
+        output: final_output
+        timeout: 1200

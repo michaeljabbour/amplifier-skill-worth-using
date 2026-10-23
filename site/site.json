@@ -1,6 +1,6 @@
 {
  "name": "Worth Using",
- "version": "0.1.0",
+ "version": "0.1.2",
  "description": "A usefulness rubric with a coach: scores whether a tool is genuinely useful to someone who didn't build it, with evidence on every rating, and helps the builder and their team close the gaps.",
  "skill_name": "worth-using",
  "theme": {

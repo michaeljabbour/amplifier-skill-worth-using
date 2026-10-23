@@ -1,9 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.1.2 (2026-10-23)
 
 - Allow a supplied, dated record of specific outside use to support Seen in Score and delegated reviews. Name the record for each supported rating; unsupported ratings stay Claimed, and Repeated still requires recorded unprompted return. Do not say return is unproven when supplied records already establish it.
 - Add a reproducible three-condition behavioral evaluation suite. The original blocked package remains separate; no live behavioral result has been measured.
+- Align the recipe with the skill: a named, dated outside-use record supports Seen.
 - Freeze the current skill revision for new evaluations, keep historical records separate, and require an explicitly declared judge family different from the evaluated model family.
 
 ## 0.1.1 (2026-10-23)

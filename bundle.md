@@ -1,7 +1,7 @@
 ---
 bundle:
   name: worth-using
-  version: 0.1.0
+  version: 0.1.2
   description: >-
     Scores whether a tool is genuinely useful to someone who didn't build it, and
     coaches the builder to close the gaps: the worth-using skill, a /useful

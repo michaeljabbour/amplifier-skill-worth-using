@@ -1,6 +1,6 @@
 bundle:
   name: worth-using-behavior
-  version: 0.1.0
+  version: 0.1.2
   description: |
     Wires the worth-using skill (tool-skills), the /useful mode (hooks-mode), and a
     staged recipe (tool-recipes) onto a host bundle. Adds no context of its own;

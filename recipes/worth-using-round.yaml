@@ -85,8 +85,9 @@ stages:
              before seeing yours.
           4. Target: restate it, or propose the nearest zone.
           5. What you can already see in the tool, all labeled CLAIMED. If the
-             material reports what a real user did, quote it as REPORTED and ask the
-             builder to confirm it; only the builder's confirmation can make it Seen.
+             material contains a named, dated record of specific use by someone
+             outside the team, label the ratings it supports SEEN and cite the
+             record; otherwise label everything CLAIMED.
         output: read_prompt
     approval:
       required: true

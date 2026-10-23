@@ -1,0 +1,4 @@
+# Core runner, metrics, HTTP transport, and tests use Python's standard library.
+# These packages render the requested PDF and figures.
+reportlab==4.4.9
+matplotlib==3.10.8

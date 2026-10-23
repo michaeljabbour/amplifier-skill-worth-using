@@ -1,7 +1,7 @@
 {
   "name": "amplifier-skill-worth-using",
   "displayName": "Worth Using",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "A usefulness rubric and coaching skill: scores whether a tool is genuinely useful to someone who didn't build it, with evidence on every rating, and coaches the builder to close the gaps. Includes a static explanatory site.",
   "license": "MIT",
   "private": false,

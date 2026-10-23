@@ -1,0 +1,29 @@
+{
+  "status": "unavailable_until_complete_pilot",
+  "planned_cohorts": {
+    "development": {
+      "fixtures": 12,
+      "seeds": 3,
+      "conversations": 324
+    },
+    "private_heldout": {
+      "fixtures": 4,
+      "seeds": 3,
+      "conversations": 108
+    }
+  },
+  "total_main_conversations": 432,
+  "main_blind_judgments": 864,
+  "main_simulator_generations": 48,
+  "main_script_audits": 48,
+  "additional_pilot_allowance": 1,
+  "private_fixture_integration": "pending; current runner main path accepts only the 12 development fixtures",
+  "method": "Condition-by-task pilot means scaled to 36 development and 12 held-out conversations per cell; shared simulator/audit means scaled from 2 to 48 fixture-seed units. Observed cell minima/maxima are sensitivity bounds, not confidence or prediction intervals.",
+  "assumptions": [
+    "Same provider-returned models, settings and prices as the pilot",
+    "Held-out token lengths and Coach turn counts are approximated by the two development pilot cases",
+    "No extra retries or invalid-script repair beyond observed attempts; unexpected charges can exceed this estimate",
+    "One additional pilot is budgeted separately because the current full command reruns its pilot",
+    "Sourced dollar values use uncached token rates and are estimates, not a provider invoice"
+  ]
+}

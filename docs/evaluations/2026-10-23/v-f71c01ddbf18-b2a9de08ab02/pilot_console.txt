@@ -1,0 +1,10 @@
+Worth Using evaluation: blocked_before_live_pilot
+Source commit: 8a3a3ac5c26b007d592c0f423f74b52c157e00e9
+Evaluated model: UNSET
+Judge model: UNSET
+Conditions: skill, baseline, placebo
+Fixtures: 2; seeds: 1; tasks: 3
+Completed empirical trials: 0
+Finding: No behavioral effect measured.
+Next: EVAL_MODEL is unset; OPENAI_API_KEY is unset; JUDGE_MODEL is unset; SIMULATOR_MODEL is unset (defaults to EVAL_MODEL); EVAL_MODEL_FAMILY is unset; declare the actual model family explicitly; JUDGE_MODEL_FAMILY is unset; declare the actual model family explicitly
+Record: docs/evaluations/2026-10-23/v-f71c01ddbf18-b2a9de08ab02

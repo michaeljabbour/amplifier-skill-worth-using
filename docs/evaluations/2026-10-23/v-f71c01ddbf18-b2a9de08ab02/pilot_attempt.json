@@ -1,0 +1,49 @@
+{
+  "recorded_at_utc": "2026-10-23T16:44:30.429102+00:00",
+  "command": "python3 evals/run.py --conditions skill,baseline --seeds 1 --pilot",
+  "exit_code": 2,
+  "status": "blocked_before_live_pilot",
+  "intended_roles": {
+    "eval": "Claude / Anthropic",
+    "judge": "OpenAI",
+    "simulator": "existing default; follows EVAL_MODEL"
+  },
+  "configuration_present": {
+    "EVAL_MODEL": false,
+    "JUDGE_MODEL": false,
+    "EVAL_MODEL_FAMILY": false,
+    "JUDGE_MODEL_FAMILY": false,
+    "OPENAI_API_KEY": false,
+    "ANTHROPIC_API_KEY": false
+  },
+  "simulator_model_override_present": false,
+  "live_api_requests": 0,
+  "provider_returned_models": {},
+  "accepted_request_settings": null,
+  "measured_token_cost_per_conversation": null,
+  "projected_full_run_usd": null,
+  "full_run_started": false,
+  "harness_hashes_verified": true,
+  "earlier_preflight_only_attempts": [
+    {
+      "run_id": "v-f71c01ddbf18-aee8a7eb0619",
+      "live_api_requests": 0,
+      "superseded_because": "Pilot report code changed before live calls."
+    },
+    {
+      "run_id": "v-f71c01ddbf18-4ce1a39588dc",
+      "live_api_requests": 0,
+      "superseded_because": "PDF heading layout corrected before live calls."
+    },
+    {
+      "run_id": "v-f71c01ddbf18-7a3d1b28ab61",
+      "live_api_requests": 0,
+      "superseded_because": "Benchmark status URL corrected to remain valid in generated documentation."
+    },
+    {
+      "run_id": "v-f71c01ddbf18-1eccea638cf7",
+      "live_api_requests": 0,
+      "superseded_because": "Pilot PDF fonts embedded and layout corrected before publication."
+    }
+  ]
+}

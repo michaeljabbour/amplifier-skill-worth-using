@@ -1,6 +1,6 @@
 # The bar Worth Using has to clear
 
-**Status: not yet run.** This is the benchmark plan. Thresholds are proposals to argue about, not results. No outcome on this page has been observed.
+**Status: Live evaluation not yet run.** See the [dated evaluation record (v-f71c01ddbf18-b2a9de08ab02)](https://github.com/michaeljabbour/amplifier-skill-worth-using/blob/main/docs/evaluations/2026-10-23/v-f71c01ddbf18-b2a9de08ab02/REPORT.md). Offline plumbing checks are not benchmark results; the record states all remaining blockers and limitations.
 
 ## Setup
 

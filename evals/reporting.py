@@ -699,6 +699,11 @@ def write_pdf(context):
 
 def write_reports(root, output, manifest, bootstrap=10000):
     root, output = Path(root), Path(output)
+    if manifest.get("phase") == "pilot":
+        # A pilot uses a nested ledger and must not disappear into an empty main
+        # report, nor be pooled with main-run efficacy observations.
+        from pilot_reporting import write_pilot_reports
+        return write_pilot_reports(root, output, manifest)
     output.mkdir(parents=True, exist_ok=True)
     key_path = output / "inputs/key.json"
     if not key_path.exists():

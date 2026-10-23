@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "cohort": "private_heldout_v1",
+  "fictional": true,
+  "private": true,
+  "source_commit": "8a3a3ac5c26b007d592c0f423f74b52c157e00e9",
+  "frozen_at_utc": "2026-10-23T16:36:19+00:00",
+  "fixture_count": 4,
+  "seed_count_planned": 3,
+  "conversations_planned": 108,
+  "evaluation_model_exposure": "none before freeze",
+  "outcome_access_before_freeze": false,
+  "payload_root_rule": "SHA256 of sorted relative path + NUL + file SHA256 + NUL + byte size + LF for every listed payload file. FREEZE.json excluded.",
+  "payload_root_sha256": "98c7f9061b7526abbfea27ff522458aa0bf7ce733b0901d8c1ac563b354cb72a",
+  "analysis_status": "Proposed analysis addendum snapshotted; full-run integration and final protocol/code freeze remain prerequisites.",
+  "freeze_manifest_sha256": "1d6c67e30635e76bba23ba2db1b37b20e2fb65684bb4f3be21a3b04066314517",
+  "validation_status": "passed; fixture hashes verified before and after freeze",
+  "public_disclosure": "Commitment and count only. The private inputs, keys, team cards, scripts and transcripts are excluded."
+}

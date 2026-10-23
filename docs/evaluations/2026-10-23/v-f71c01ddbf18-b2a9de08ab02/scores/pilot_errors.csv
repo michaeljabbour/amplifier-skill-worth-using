@@ -1,0 +1,7 @@
+source,role,run_id,error
+preflight,,,EVAL_MODEL is unset
+preflight,,,OPENAI_API_KEY is unset
+preflight,,,JUDGE_MODEL is unset
+preflight,,,SIMULATOR_MODEL is unset (defaults to EVAL_MODEL)
+preflight,,,EVAL_MODEL_FAMILY is unset; declare the actual model family explicitly
+preflight,,,JUDGE_MODEL_FAMILY is unset; declare the actual model family explicitly

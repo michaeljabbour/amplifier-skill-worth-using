@@ -166,12 +166,16 @@ def update_benchmark_status(output, manifest):
     path = ROOT / "docs" / "BENCHMARK.md"
     if not path.exists():
         return
-    relative = str((output / "REPORT.md").relative_to(ROOT / "docs"))
+    # The static build publishes BENCHMARK.md but not dated evaluation records.
+    # Point to the repository so its generated copy does not contain a broken
+    # local link. The main-branch record becomes available when this PR merges.
+    relative = str((output / "REPORT.md").relative_to(ROOT))
+    record_url = "https://github.com/michaeljabbour/amplifier-skill-worth-using/blob/main/" + relative
     if manifest.get("completed_empirical_trials", 0):
         summary = "Live run recorded; independent spot audit pending" if manifest.get("status") == "run_complete_hand_check_pending" else "Evaluation record available"
     else:
         summary = "Live evaluation not yet run"
-    line = f"**Status: {summary}.** See the [dated evaluation record ({output.name})]({relative}). Offline plumbing checks are not benchmark results; the record states all remaining blockers and limitations."
+    line = f"**Status: {summary}.** See the [dated evaluation record ({output.name})]({record_url}). Offline plumbing checks are not benchmark results; the record states all remaining blockers and limitations."
     original = path.read_text()
     updated, count = re.subn(r"(?m)^\*\*Status:.*$", line, original, count=1)
     if count != 1:

@@ -25,6 +25,10 @@ Every rating carries its evidence: **Claimed** (the builder says so, or it was i
 
 Two zones mark where to stop. **Stranger-ready**: Job, First value, Fit, Outcome, and Trust are Solid and at least Seen. **Worth using**: stranger-ready, plus Return is Solid and Repeated. Return usually takes days to show, so a session ends at stranger-ready with a return check: who, when, and what counts as coming back.
 
+## The film
+
+A 57-second film explains the idea with one fictional example: a meeting-summary bot everyone "loves," until a stranger feeds it an empty meeting. It plays on the [site](https://michaeljabbour.github.io/amplifier-skill-worth-using/#film) and lives at `site/assets/worth-using-film.mp4` with English captions.
+
 ## Use the skill
 
 Give an agent the skill and the tool: a repo, a README, a demo, or a paragraph. Say who it's for. Then pick a mode:

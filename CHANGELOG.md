@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1 (2026-10-23)
+
+- Add the Worth Using film to the site, with a WebM fallback, a poster, and English captions.
+
 ## 0.1.0 (2026-10-23)
 
 - Add the `worth-using` skill: a six-criterion usefulness rubric (Job, First value, Fit, Outcome, Trust, Return) where every rating carries its evidence (Claimed, Seen, Repeated), two zones (stranger-ready, worth using), and two modes: Score and Coach.

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="@@DESCRIPTION@@">
   <meta name="theme-color" content="#f6f4ee">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; media-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta property="og:title" content="Worth Using">
   <meta property="og:description" content="Useful to someone who isn't you. A usefulness rubric with a coach.">
   <meta property="og:type" content="website">
@@ -22,15 +22,26 @@
 <header class="masthead">
   <div class="wrap">
     <a class="brand" href="#main" aria-label="Worth Using home"><span class="brand-mark" aria-hidden="true"></span><span><b>Amplifier</b><small>Skills for thoughtful work</small></span></a>
-    <nav class="nav" aria-label="Main navigation"><a href="#rubric">Rubric</a><a href="#score">Score</a><a href="#explore">Runs</a><a href="#method">Method</a><a href="#team">Teams</a><a href="#bar">The bar</a><a class="nav-use" href="#use-skill">Use the skill</a></nav>
+    <nav class="nav" aria-label="Main navigation"><a href="#film">Film</a><a href="#rubric">Rubric</a><a href="#score">Score</a><a href="#explore">Runs</a><a href="#method">Method</a><a href="#team">Teams</a><a href="#bar">The bar</a><a class="nav-use" href="#use-skill">Use the skill</a></nav>
   </div>
 </header>
 <main id="main" class="wrap">
   <section class="hero fit-hero" aria-labelledby="hero-title">
     <div class="hero-grid">
       <div><p class="eyebrow">A usefulness rubric, with a coach</p><h1 id="hero-title">Worth<br>Using</h1><p class="promise">Useful to someone who isn't you.<br>Build what people come back to.</p></div>
-      <div class="hero-intro"><p class="lede">Every tool is useful to the person who built it. That's the one audience it can't surprise. This skill scores your tool the way a stranger meets it, on six plain criteria, and helps you and your team close the gaps.</p><p>Score it in ten minutes before a review, or run a short coaching loop. Every rating carries its evidence: claimed, seen, or repeated. You get a usefulness card for the tool and, when coached, a growth card for you.</p><div class="actions"><a class="button primary" href="#score">Score a tool</a><a class="text-link" href="#rubric">Read the rubric</a><a class="text-link" href="#use-skill">Get the skill</a></div><p class="note hero-note">Examples are fictional. The benchmark hasn't run yet. <a href="#bar">See the bar it has to clear.</a></p></div>
+      <div class="hero-intro"><p class="lede">Every tool is useful to the person who built it. That's the one audience it can't surprise. This skill scores your tool the way a stranger meets it, on six plain criteria, and helps you and your team close the gaps.</p><p>Score it in ten minutes before a review, or run a short coaching loop. Every rating carries its evidence: claimed, seen, or repeated. You get a usefulness card for the tool and, when coached, a growth card for you.</p><div class="actions"><a class="button primary" href="#film">Watch the film</a><a class="text-link" href="#score">Score a tool</a><a class="text-link" href="#rubric">Read the rubric</a><a class="text-link" href="#use-skill">Get the skill</a></div><p class="note hero-note">Examples are fictional. The benchmark hasn't run yet. <a href="#bar">See the bar it has to clear.</a></p></div>
     </div>
+  </section>
+
+  <section id="film" class="film-section" aria-labelledby="film-title">
+    <div class="film-heading"><h2 id="film-title">The whole idea in under a minute.</h2><p>Sound on. Captions included.</p></div>
+    <video class="film" controls preload="metadata" playsinline poster="assets/worth-using-film-poster.jpg" width="1920" height="1080" aria-describedby="film-note">
+      <source src="assets/worth-using-film.mp4" type="video/mp4">
+      <source src="assets/worth-using-film.webm" type="video/webm">
+      <track kind="captions" src="assets/worth-using-film.vtt" srclang="en" label="English" default>
+      <a href="assets/worth-using-film.mp4">Download the film (MP4)</a>
+    </video>
+    <p id="film-note" class="note">A fictional example throughout. The bot, the team and the names on the tasks are made up.</p>
   </section>
 
   <section id="rubric" class="section rubric-section" aria-labelledby="rubric-title">

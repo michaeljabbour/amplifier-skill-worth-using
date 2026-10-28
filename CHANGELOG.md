@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-28 — Public first use
+
+- Add a complete public clone/install path beside the first useful outcome, with prerequisites, safe updates and a full-folder ZIP alternative. Preserve the existing method, films and interactive examples.
+
+
 ## 0.1.2 (2026-10-23)
 
 - Allow a supplied, dated record of specific outside use to support Seen in Score and delegated reviews. Name the record for each supported rating; unsupported ratings stay Claimed, and Repeated still requires recorded unprompted return. Do not say return is unproven when supplied records already establish it.

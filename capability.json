@@ -126,6 +126,7 @@
     "docs/INSTALL.md",
     "docs/CONSOLIDATION.md"
   ],
-  "publication_status": "Local consolidation candidate; existing published versions remain separate.",
-  "site_builder": "native"
+  "publication_status": "Public source, site and documented installation path are available. Evidence scopes are recorded separately.",
+  "site_builder": "native",
+  "repository_url": "https://github.com/michaeljabbour/amplifier-skill-worth-using"
 }

@@ -8,6 +8,18 @@ Every tool is useful to the person who built it. That's the one audience it can'
 
 This project pairs the [`worth-using` skill](skills/worth-using/SKILL.md) and its [rubric reference](skills/worth-using/references/rubric.md) with an explanatory static website that includes a ten-minute scorer. The [benchmark plan](docs/BENCHMARK.md) sets the bar the skill has to clear; it has not been run yet.
 
+## First use
+
+Bring a tool and one person it should help. Leave with six separate ratings, each tied to its evidence, and a practical gap to work on next.
+
+```sh
+git clone https://github.com/michaeljabbour/amplifier-skill-worth-using.git
+cd amplifier-skill-worth-using
+python3 scripts/capability.py install --dest ~/.agents/skills
+```
+
+Requires Git and Python 3.11+. Use the skills directory supported by your agent. Ask for Worth Using in a new session and supply one real task. The [install guide](docs/INSTALL.md) explains the complete ZIP alternative and safe updates.
+
 ## The rubric
 
 Six criteria, each rated Missing, Partial, or Solid for one named user:

@@ -1,14 +1,27 @@
 # Install Worth Using
 
-Builders checking whether a tool helps someone outside its team.
+Bring a tool and one person it should help. Leave with six separate ratings, each tied to its evidence, and a practical gap to work on next.
 
-From this checkout:
+## From the public source
+
+Use Git and Python 3.11 or later. These commands install the complete method into a skills-parent directory:
 
 ```sh
-python3 scripts/capability.py install --dest /path/to/host/skills
+git clone https://github.com/michaeljabbour/amplifier-skill-worth-using.git
+cd amplifier-skill-worth-using
+python3 scripts/capability.py install --dest ~/.agents/skills
 ```
 
-Replace `/path/to/host/skills` with the host's skills parent directory. Keep the complete installed folder, references and license. The installer preserves conflicting local edits; `--replace` retains a dated backup.
+Choose the discovery directory supported by your agent. `~/.agents/skills` is an example. Start a new session if your host only discovers skills at startup, then ask for Worth Using by name with one task. Read the returned result and its sources before acting on it.
 
+The installer refuses conflicting files. Keep your changes before deliberately replacing a copy. It does not register a host, start a service or prove model behavior.
 
-Source evidence, model-run results and outside-user use remain distinct. Six criteria and evidence grades are never added or averaged.
+## Without a checkout
+
+Download the complete ZIP from [the public site](https://michaeljabbour.github.io/amplifier-skill-worth-using/#use-skill), extract it and place the whole skill folder in your host’s skills directory. Keep all references, helpers and license files together. The single SKILL.md download is for reading; use the whole folder to install.
+
+## What to expect
+
+Bring a tool and one person it should help. Leave with six separate ratings, each tied to its evidence, and a practical gap to work on next.
+
+Proof of demand from a polished demo. Outside-user usefulness needs outside-user evidence.

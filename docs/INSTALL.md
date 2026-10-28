@@ -24,4 +24,4 @@ Download the complete ZIP from [the public site](https://michaeljabbour.github.i
 
 Bring a tool and one person it should help. Leave with six separate ratings, each tied to its evidence, and a practical gap to work on next.
 
-Proof of demand from a polished demo. Outside-user usefulness needs outside-user evidence.
+Outside-user usefulness needs outside-user evidence.

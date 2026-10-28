@@ -21,3 +21,5 @@
 - Package the repository as the `worth-using` Amplifier bundle with the `/useful` mode and the staged `worth-using-round` recipe.
 - Add a fictional worked run and the benchmark plan. The benchmark has not been run.
 - Add a static explanatory site in the Amplifier Smart Tools family theme, with an in-browser scorer that stores nothing, and a checked GitHub Pages workflow.
+
+- Added a complete portable install with MIT notice and conflict-preserving local installer; retained the canonical method and independent evidence dimensions.

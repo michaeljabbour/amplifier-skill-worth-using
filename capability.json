@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "id": "worth-using",
+  "display_name": "Worth Using",
+  "kind": "skill",
+  "promise": "Find what helps a stranger, with proof behind every rating.",
+  "audience": "Builders checking whether a tool helps someone outside its team.",
+  "trigger": "Score six criteria with evidence, coach one useful next move, or collect independent team reviews before revealing them.",
+  "skill_path": "skills/worth-using",
+  "install_commands": [
+    "python3 scripts/capability.py install --dest /path/to/host/skills"
+  ],
+  "runtime_install_commands": [],
+  "modes": [],
+  "examples": [],
+  "boundaries": [
+    "The existing canonical method and native interfaces remain the source of truth.",
+    "Publication, source inspection, component tests and outside-user benefit are separate claims."
+  ],
+  "evidence_summary": "Source evidence, model-run results and outside-user use remain distinct. Six criteria and evidence grades are never added or averaged.",
+  "verification": [],
+  "sources": [
+    {
+      "repo": "amplifier-skill-worth-using",
+      "commit": "8a3a3ac5c26b007d592c0f423f74b52c157e00e9",
+      "role": "Existing implementation and retained history",
+      "license": "MIT"
+    }
+  ],
+  "consolidation": [
+    {
+      "repo": "amplifier-skill-worth-using",
+      "paths": [
+        "skills/worth-using"
+      ],
+      "destination": "amplifier-skill-worth-using:canonical method or implementation",
+      "role": "method",
+      "action": "keep",
+      "why": "Six separate criteria with evidence grades, no aggregate score, a cold first-session view and explicit return check.",
+      "interface": "Versioned request/result or plain-file contract; adapters do not own the method.",
+      "revision": "8a3a3ac5c26b007d592c0f423f74b52c157e00e9",
+      "sources": [
+        "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/skills/worth-using"
+      ],
+      "source_paths": [
+        {
+          "path": "skills/worth-using",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/skills/worth-using"
+        }
+      ]
+    },
+    {
+      "repo": "amplifier-skill-worth-using",
+      "paths": [
+        "bundle.md",
+        "behaviors",
+        "modes",
+        "recipes"
+      ],
+      "destination": "amplifier-skill-worth-using:optional Amplifier surface",
+      "role": "adapter",
+      "action": "keep",
+      "why": "The host surface loads the canonical method rather than reproducing it.",
+      "interface": "On-demand discovery and bounded recipe; no always-on duplicate rubric.",
+      "revision": "8a3a3ac5c26b007d592c0f423f74b52c157e00e9",
+      "sources": [
+        "https://github.com/michaeljabbour/amplifier-skill-worth-using/blob/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/bundle.md",
+        "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/behaviors",
+        "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/modes",
+        "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/recipes"
+      ],
+      "source_paths": [
+        {
+          "path": "bundle.md",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-worth-using/blob/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/bundle.md"
+        },
+        {
+          "path": "behaviors",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/behaviors"
+        },
+        {
+          "path": "modes",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/modes"
+        },
+        {
+          "path": "recipes",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/recipes"
+        }
+      ]
+    },
+    {
+      "repo": "amplifier-skill-worth-using",
+      "paths": [
+        "site",
+        "scripts",
+        "docs"
+      ],
+      "destination": "amplifier-skill-worth-using:guide and evidence with separate install artifact",
+      "role": "reference/eval",
+      "action": "keep",
+      "why": "Keep source method, site explanation and dated results linked; media and reports are not runtime requirements.",
+      "interface": "Build-time source fidelity and versioned evidence references.",
+      "revision": "8a3a3ac5c26b007d592c0f423f74b52c157e00e9",
+      "sources": [
+        "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/site",
+        "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/scripts",
+        "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/docs"
+      ],
+      "source_paths": [
+        {
+          "path": "site",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/site"
+        },
+        {
+          "path": "scripts",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/scripts"
+        },
+        {
+          "path": "docs",
+          "url": "https://github.com/michaeljabbour/amplifier-skill-worth-using/tree/8a3a3ac5c26b007d592c0f423f74b52c157e00e9/docs"
+        }
+      ]
+    }
+  ],
+  "docs": [
+    "docs/INSTALL.md",
+    "docs/CONSOLIDATION.md"
+  ],
+  "publication_status": "Local consolidation candidate; existing published versions remain separate.",
+  "site_builder": "native"
+}

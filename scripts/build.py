@@ -10,7 +10,7 @@ from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL_DIR = ROOT / 'skills/worth-using'
-SKILL_FILES = ('SKILL.md', 'references/rubric.md')
+SKILL_FILES = ('SKILL.md', 'references/rubric.md', 'LICENSE.md')
 RATINGS = ('Missing', 'Partial', 'Solid')
 GRADES = ('Claimed', 'Seen', 'Repeated')
 LEVELS = {1: 'E', 2: 'D', 3: 'S'}

@@ -11,7 +11,7 @@ from zipfile import ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL_DIR = ROOT / 'skills/worth-using'
-SKILL_FILES = ('SKILL.md', 'references/rubric.md')
+SKILL_FILES = ('SKILL.md', 'references/rubric.md', 'LICENSE.md')
 
 
 class Page(HTMLParser):

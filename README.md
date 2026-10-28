@@ -107,3 +107,10 @@ This is a structured review and coaching aid, not a usability study, an analytic
 ## License and provenance
 
 MIT; see [LICENSE](LICENSE). The family theme snapshot keeps its own [MIT notice](site/theme/LICENSE). The page follows the Amplifier Smart Tools family site as a design and implementation reference.
+
+
+## Portable capability and ownership
+
+Find what helps a stranger, with proof behind every rating.
+
+Read the [installation guide](docs/INSTALL.md) for the supported local path and [consolidation record](docs/CONSOLIDATION.md) for ownership and evidence limits. Canonical catalog name: **Worth Using**; repository: `amplifier-skill-worth-using`.

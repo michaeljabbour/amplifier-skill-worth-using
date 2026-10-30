@@ -126,3 +126,7 @@ MIT; see [LICENSE](LICENSE). The family theme snapshot keeps its own [MIT notice
 Find what helps a stranger, with proof behind every rating.
 
 Read the [installation guide](docs/INSTALL.md) for the supported local path and [consolidation record](docs/CONSOLIDATION.md) for ownership and evidence limits. Canonical catalog name: **Worth Using**; repository: `amplifier-skill-worth-using`.
+
+## Repository migration
+
+This repository was renamed from `amplifier-skill-worth-using` to `amplifier-capability-worth-using`. Existing installed method names, bundle aliases and native interfaces stay the same. See the [migration guide](https://michaeljabbour.github.io/migration/) and [repository map](https://michaeljabbour.github.io/migration/mapping.json) for source URL updates.
